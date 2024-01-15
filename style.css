@@ -50,7 +50,8 @@ body {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~Blocks~~~~~~~~~~~~~~~~~~~~~~~~ */
 .block-b {
-    min-height: 880px;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-content: center;

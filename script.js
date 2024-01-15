@@ -42,7 +42,11 @@ function ToggleDarkMode() {
   });
 
   let element = document.getElementById("dropbtn");
-  element.src = "./assets/Icons/menu-drk.png";
+  // console.log(element.src);
+  // console.log(element.src[element.src.length - 5]);
+  element.src[element.src.length - 5] == "t"
+    ? (element.src = "./assets/Icons/menu-drk.png")
+    : (element.src = "./assets/Icons/menu-light.png");
 }
 
 // CAROUSEL STUFF
