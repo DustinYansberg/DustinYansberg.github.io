@@ -49,6 +49,8 @@ function ToggleDarkMode() {
     : (element.src = "./assets/Icons/menu-light.png");
 }
 
+const scrollToId = (elemId) => document.getElementById(elemId).scrollIntoView();
+
 // CAROUSEL STUFF
 
 const track = document.querySelector(".carousel__track");
