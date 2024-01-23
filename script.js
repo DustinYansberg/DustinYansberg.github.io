@@ -16,25 +16,16 @@ function ProjectMouseOver(elem) {
 // Dark mode toggle
 function ToggleDarkMode() {
   let elements = document.querySelectorAll(
-    "div",
-    "a",
-    "img",
-    "h1",
-    "h2",
-    "h3",
-    "h4",
-    "h5",
-    "h6",
-    "p",
-    "ul",
-    "li",
-    "button",
-    "input"
+    "div, a, img, h1, h2, h3, h4, h5, h6, p, ul, li, button, input"
   );
+
+  console.log(elements);
   document.body.classList.toggle("dark-mode1");
   elements.forEach((element) => {
-    if (element.classList.contains("block-emphasis")) {
-      console.log(element);
+    if (
+      element.classList.contains("block-emphasis") ||
+      element.classList.contains("emphasis-content")
+    ) {
       element.classList.toggle("dark-mode2");
     } else {
       element.classList.toggle("dark-mode1");
@@ -53,4 +44,23 @@ const scrollToId = (elemId) => document.getElementById(elemId).scrollIntoView();
 
 // CAROUSEL STUFF
 
-const track = document.querySelector(".carousel__track");
+$(document).ready(function () {
+  $("#myCarousel").on("slide.bs.carousel", function (e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $("#myCarousel .carousel-item").length;
+
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        // append slides to end
+        if (e.direction == "left") {
+          $(".carousel-item").eq(i).appendTo(".carousel-inner");
+        } else {
+          $(".carousel-item").eq(0).appendTo($(this).find(".carousel-inner"));
+        }
+      }
+    }
+  });
+});

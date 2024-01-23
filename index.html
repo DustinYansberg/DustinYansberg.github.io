@@ -9,6 +9,12 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <!-- My style sheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Dustin Yansberg</title>
   </head>
@@ -63,7 +69,7 @@
 
     <!-- elevator pitch and resume -->
     <div class="block block-emphasis elevatorPitch">
-      <p>
+      <p class="emphasis-content">
         Crafting user friendly and efficient
         <span class="f-black">software solutions</span> is not just my
         profession,
@@ -186,7 +192,7 @@
 
     <!-- tag line -->
     <div class="block block-emphasis">
-      <p>
+      <p class="emphasis-content">
         Below is an evolving collection of the projects I have worked on. This
         portfolio is always growing and changing, and some of my most recents
         projects may not yet be added.
@@ -194,87 +200,166 @@
     </div>
 
     <!-- Projects -->
-    <div id="projects" class="block block-m">
-      <h1>Projects</h1>
+    <div class="container-fluid">
+      <h1 id="projects" class="text-center mb-3">Projects</h1>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner row w-100 mx-auto">
+          <div class="carousel-item col-md-4 active">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="./assets/images/projects/Sentiment-Analysis1.webp"
+                alt="Card image cap"
+              />
+              <div class="card-body emphasis-content">
+                <h4 class="card-title emphasis-content">
+                  Sentimental Analysis
+                </h4>
+                <p class="card-text emphasis-content">
+                  In this project Built a sentiment analysis model which
+                  resulted in 80% accuracy by way of Multinomial Naive Bayes
+                  Algorithms. Technologies used include Python, Matplotlib,
+                  scikit-learn, and Jupyter Notebook.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">
+                    <a
+                      href="https://github.com/DustinYansberg/Product_Review_Sentiment_Analysis/blob/main/README.md"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="./assets/images/projects/61cf0858050f4d1b2cf8eefe_Logistics-Inventory-Management.jpeg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Optimal Delivery Route</h4>
+                <p class="card-text">
+                  In this project I determined the optimal delivery routing of a
+                  given set of packages with addresses. The algorithm used
+                  needed to flexible enough to adjust delivery routing based on
+                  package weight and volume.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="./assets/images/projects/rpgOverworld.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Classic RPG with turn-based battle</h4>
+                <p class="card-text">
+                  Worked on a team of three to develop a short game with an
+                  overworld, a battle scene, and complex battle mechanics. We
+                  used Plastic SCM for version control in Unity and C#. My main
+                  contribution was the battle system and logic, though we all
+                  contributed to the whole collectively.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="https://picsum.photos/seed/2/800/600"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Video Calling and Gaming Web Application
+                </h4>
+                <p class="card-text">
+                  Social platform that randomly connects users together for hte
+                  purpose of socializing over games. The platform enables users
+                  to engage in video calling and casual multiplayer game playing
+                  while maintaining control on whether they stay connected with
+                  any given user.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <!-- first project row -->
-      <div class="project-row">
-        <div class="project-l project">
-          <img
-            onmouseover="ProjectMouseOver(this.nextElementSibling)"
-            src="./assets/images/projects/Sentiment-Analysis1.webp"
-            alt="Sentimental Analysis project"
-          />
-          <div
-            id="project1"
-            class="project-name"
-            onmouseleave="ProjectMouseOver(this)"
-          >
-            <h3>Sentimental Analysis</h3>
-            <p>
-              This is a project where I analyzed the emotional connotations of
-              restaurant reviews
-            </p>
-          </div>
+          <!-- <div class="carousel-item col-md-4">
+            <div class="card">
+              <img
+                class="card-img-top img-fluid"
+                src="https://picsum.photos/seed/2/800/600"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Card 2</h4>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div> -->
         </div>
-
-        <div class="project-s project">
-          <img
-            onmouseover="ProjectMouseOver(this.nextElementSibling)"
-            src="./assets/images/projects/knn4.png"
-            alt="Sentimental Analysis project"
-          />
-          <div
-            id="project2"
-            class="project-name"
-            onmouseleave="ProjectMouseOver(this)"
-          >
-            <h3>Optimal Delivery Route</h3>
-            <p>
-              This is a project where I determined the optimal delivery route of
-              packages in a city with various constraints.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- second project row -->
-      <div class="project-row">
-        <div class="project-s project">
-          <img
-            onmouseover="ProjectMouseOver(this.nextElementSibling)"
-            src="./assets/images/projects/61cf0858050f4d1b2cf8eefe_Logistics-Inventory-Management.jpeg"
-            alt="Sentimental Analysis project"
-          />
-          <div
-            id="project3"
-            class="project-name"
-            onmouseleave="ProjectMouseOver(this)"
-          >
-            <h3>Inventory Management System</h3>
-            <p>This is a project where I built a system to manage inventory</p>
-          </div>
-        </div>
-        <div class="project-l project">
-          <img
-            onmouseover="ProjectMouseOver(this.nextElementSibling)"
-            src="./assets/images/projects/Imageg79l-1682602936960.avif"
-            alt="Sentimental Analysis project"
-          />
-          <div
-            id="project4"
-            class="project-name"
-            onmouseleave="ProjectMouseOver(this)"
-          >
-            <h3>Flappy Bird</h3>
-            <p>
-              In unity and C#, I recreated flappy bird from the ground up with
-              my own assets and code.
-            </p>
-          </div>
-        </div>
+        <a
+          class="carousel-control-prev"
+          href="#myCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#myCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
+    <footer class="small">
+      Created, designed, developed and deployed by Dustin Yansberg, 2023
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
