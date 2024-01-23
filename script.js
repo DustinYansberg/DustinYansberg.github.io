@@ -1,8 +1,5 @@
 function OpenResume() {
-  window.open(
-    "https://dustinyansberg.github.io/assets/PDF/DUSTIN.YANSBERG.RESUME.pdf",
-    "_blank"
-  );
+  window.open("/assets/PDF/DUSTIN.YANSBERG.Resume.pdf", "_blank");
 }
 
 // when the user click on the menu button, open it in a drop down
