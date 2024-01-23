@@ -16,25 +16,16 @@ function ProjectMouseOver(elem) {
 // Dark mode toggle
 function ToggleDarkMode() {
   let elements = document.querySelectorAll(
-    "div",
-    "a",
-    "img",
-    "h1",
-    "h2",
-    "h3",
-    "h4",
-    "h5",
-    "h6",
-    "p",
-    "ul",
-    "li",
-    "button",
-    "input"
+    "div, a, img, h1, h2, h3, h4, h5, h6, p, ul, li, button, input"
   );
+
+  console.log(elements);
   document.body.classList.toggle("dark-mode1");
   elements.forEach((element) => {
-    if (element.classList.contains("block-emphasis")) {
-      console.log(element);
+    if (
+      element.classList.contains("block-emphasis") ||
+      element.classList.contains("emphasis-content")
+    ) {
       element.classList.toggle("dark-mode2");
     } else {
       element.classList.toggle("dark-mode1");
